@@ -15,6 +15,19 @@ This is a sample application that you can use to follow along with the tutorial 
 
 This sample application is taken from the official [Laravel sample task list application](https://github.com/laravel/quickstart-basic) and modified minimally to make it work with Azure App Service. For instructions on how to use Laravel, see the official repository.
 
+For MySQL version 8.0 and above, Generated Invisible Primary Keys(GIPK) is enabled by default for all the Azure Database for MySQL Flexible Servers.
+
+Disabling GIPK fixes the issue, and to do so follow the following steps:
+
+    Sign in to the Azure portal, then locate your Azure Database for MySQL - Flexible Server.
+
+    Under the SETTINGS section, click Server parameters to open the server parameters page for the Azure Database for MySQL - Flexible Server.
+
+    Search for sql_generate_invisible_primary_key and update it to off.
+
+Source: https://learn.microsoft.com/en-us/azure/mysql/flexible-server/concepts-limitations#generated-invisible-primary-keys
+
+
 ## License
 
 See [LICENSE](LICENSE).
